@@ -9,6 +9,7 @@
 #include <errno.h>
 
 #include "my_sleep.h"
+#include "my_uptime.h"
 
 #define BUF_SIZE 1024
 
@@ -23,7 +24,7 @@ int main(int argc, char *argv[]){
     int testInteger;
     int sleep_seconds = 0;
 
-    printf("Available functions: \n1. my_sleep \n2. uname \n3. ADD MISSING COMMAND\n");
+    printf("Available functions: \n1. my_sleep \n2. uname \n3. my_uptime\n");
     printf("Enter the number of the function you want to run: \n");
 
     (void)scanf("%d", &testInteger);
@@ -32,6 +33,14 @@ int main(int argc, char *argv[]){
         printf("How long should sleep last? Enter the number of seconds: \n"); 
         (void)scanf("%d", &sleep_seconds);   
         ret_code = my_sleep(sleep_seconds);
+    }
+    else if (testInteger == 2){
+        printf("my_uname TBD\n");
+        //TBD
+    }
+    else if (testInteger == 3){
+        printf("my_uptime\n");
+        my_uptime();
     }
     /*
     else if (strcmp( command, "my_uname" ) == 0){
