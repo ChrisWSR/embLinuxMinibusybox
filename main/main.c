@@ -14,16 +14,24 @@
 
 int main(int argc, char *argv[]){
 
+    /*
     const char *command = argv[1];
     const char *argument = argv[2];
+    */
 
     int ret_code = 0;
+    int testInteger;
+    int sleep_seconds = 0;
 
-    printf("Command: %s\n", command);
-    printf("Argument: %s\n", argument);
+    printf("Available functions: \n1. my_sleep \n2. uname \n3. ADD MISSING COMMAND\n");
+    printf("Enter the number of the function you want to run: \n");
 
-    if (strcmp( command, "my_sleep" ) == 0){     
-        ret_code = my_sleep(argc, argv);
+    (void)scanf("%d", &testInteger);
+
+    if (testInteger == 1){
+        printf("How long should sleep last? Enter the number of second: \n"); 
+        (void)scanf("%d", &sleep_seconds);   
+        ret_code = my_sleep(sleep_seconds);
     }
     /*
     else if (strcmp( command, "my_uname" ) == 0){
