@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
     (void)scanf("%d", &testInteger);
 
     if (testInteger == 1){
-        printf("How long should sleep last? Enter the number of second: \n"); 
+        printf("How long should sleep last? Enter the number of seconds: \n"); 
         (void)scanf("%d", &sleep_seconds);   
         ret_code = my_sleep(sleep_seconds);
     }
