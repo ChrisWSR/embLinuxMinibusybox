@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
     }
     else if (testInteger == 2){
         printf("my_uname TBD\n");
-        //TBD
+        my_uname();
     }
     else if (testInteger == 3){
         printf("my_uptime\n");
