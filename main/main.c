@@ -9,6 +9,7 @@
 #include <errno.h>
 
 #include "my_sleep.h"
+#include "my_uptime.h"
 
 #define BUF_SIZE 1024
 
@@ -32,6 +33,10 @@ int main(int argc, char *argv[]){
         printf("How long should sleep last? Enter the number of seconds: \n"); 
         (void)scanf("%d", &sleep_seconds);   
         ret_code = my_sleep(sleep_seconds);
+    }
+    else if (strcmp( command, "my_uptime" ) == 0){
+        printf("my_uptime\n");
+        my_uptime();
     }
     /*
     else if (strcmp( command, "my_uname" ) == 0){
