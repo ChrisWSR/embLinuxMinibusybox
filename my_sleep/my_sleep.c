@@ -8,27 +8,19 @@
 #include <sys/types.h>
 #include <errno.h>
 
-int my_sleep(int argc, char *argv[]){
+int my_sleep(int num_seconds){
 
-    if (argc < 3){
-            printf("No time provided\n");
-            return 1;
+   
+    if (num_seconds<0){
+        num_seconds *= -1;
     }
-    else{
-        int seconds = atoi(argv[2]);
-        if (seconds<0){
-            seconds *= -1;
-        }
-        if (seconds>100){
-            seconds = 100;
-        }
-        printf("Sleeping for %d seconds...\n", seconds);
-        sleep(seconds);
-        printf("Waking up!\n");
-        return 0;
+    if (num_seconds>100){
+        num_seconds = 100;
     }
-
-    
+    printf("Sleeping for %d seconds...\n", num_seconds);
+    sleep(num_seconds);
+    printf("Waking up!\n");
+    return 0;    
 
 }
 

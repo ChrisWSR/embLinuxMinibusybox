@@ -8,4 +8,4 @@
 #include <sys/types.h>
 #include <errno.h>
 
-int my_sleep(int argc, char *argv[]);
+int my_sleep(int num_seconds);
