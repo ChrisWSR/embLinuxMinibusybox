@@ -74,5 +74,5 @@ int main(int argc, char *argv[]){
     else{
         printf("The functionality has not been implemented!\n");
     }   
-    return 0;
+    return ret_code;
 }
