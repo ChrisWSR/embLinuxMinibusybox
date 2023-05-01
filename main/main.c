@@ -7,9 +7,10 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <errno.h>
-
-#include "my_sleep.h"
+#include "my_uname.h"
 #include "my_uptime.h"
+#include "my_sleep.h"
+
 
 #define BUF_SIZE 1024
 
