@@ -11,8 +11,9 @@ long my_uptime(void) {
 	if(error != 0) {
 		printf("code error = %d\n", error);
 	}
-	return s_info.uptime;                                                // No longer needed.
+	
     printf("Update is: %ld\n", s_info.uptime);
 	printf("System up for %ld seconds, %ld minutes, %ld hours, %ld days\n", s_info.uptime, s_info.uptime / 60, s_info.uptime / 3600, s_info.uptime / 86400);
+	return s_info.uptime;                                                // No longer needed.
 }
 
